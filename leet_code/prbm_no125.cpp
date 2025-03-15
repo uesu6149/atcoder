@@ -41,13 +41,14 @@ public:
             char tmp_a = s[i];
             char tmp_b = s[j];
 
-            if (isalpha(tmp_a) > 0 || isalnum(tmp_a) > 0) {
+			if (isalnum(tmp_a) > 0) {
                 tmp_a = tolower(tmp_a);
             } else {
                 i++;
                 continue;
             }
-            if (isalpha(tmp_b) > 0 || isalnum(tmp_b) > 0) {
+
+            if (isalnum(tmp_b) > 0) {
                 tmp_b = tolower(tmp_b);
             } else {
                 j--;
