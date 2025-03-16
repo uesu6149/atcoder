@@ -11,6 +11,19 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
+        ListNode* prev = nullptr;
+        ListNode* current = head;
+        ListNode* next = nullptr;
+
+        while (current != nullptr) {
+            next = current->next;   // 1
+            current->next = prev;   // 2
+            prev = current;         // 3
+            current = next;         // 4
+        }
+        return prev;
+    }
+    ListNode* reverseList_yoshi(ListNode* head) {
         stack<int> s;
 
         ListNode* current = head;
@@ -26,6 +39,5 @@ public:
             current = current->next;
         }
         return head;
-        
     }
 };
