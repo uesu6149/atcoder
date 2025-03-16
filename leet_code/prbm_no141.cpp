@@ -8,6 +8,7 @@
  */
 class Solution {
 public:
+	//‹T‚ÆƒEƒTƒM‚ÌƒAƒ‹ƒSƒŠƒYƒ€iFloyd‚ÌzŠÂŒŸo–@j
     bool hasCycle(ListNode* head) {
         if (head == nullptr || head->next == nullptr) {
             return false;
